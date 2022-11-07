@@ -1,0 +1,18 @@
+<%- include('./partials/header'); %>
+  <main>
+    <div class="ui segment">
+      <h1><%= title %></h1>
+      <% if (pokemons.length <= 1) { %>
+        <h2>Mon Pokémon</h2>
+      <% } else { %>
+        <h2>Mes Pokémons</h2>
+      <% } %>
+      <% pokemons.forEach(function(pokemon) { %>
+        <li class="ui segment">
+          <strong><%= pokemon.name %></strong>
+          est de type <%= pokemon.type %>.
+        </li>
+      <% }); %>
+    </div>
+  </main>
+  <%- include('./partials/footer'); %>
